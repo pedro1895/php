@@ -19,6 +19,12 @@ Nome:
 <br/>
 <input type="text" name="name" value="{{$church->name}}" class="form-control" />
 <br/>
+Apelido:
+<br/>
+<input type="text" name="nickname" value="{{$church->nickname}}" class="form-control" />
+<br/>
 <input type="submit" value="enviar" class="btn btn-outline-primary"/>
+
+<a href="{{route('church.index')}}" class="btn btn-outline-primary"> Cancelar </a>
 </form>
 @endsection

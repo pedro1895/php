@@ -9,6 +9,9 @@
                     Nome da igreja
                 </th>
                 <th>
+                    Apelido da igreja
+                </th>
+                <th>
                     Data da criação
                 </th>
                 <th>
@@ -21,6 +24,9 @@
             <tr>
                 <td>
                     {{$church->name}}
+                </td>
+                <td>
+                    {{$church->nickname}}
                 </td>
                 <td>
                     {{$church->created_at->format('d/m/Y')}}

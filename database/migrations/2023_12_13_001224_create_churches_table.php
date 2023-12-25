@@ -15,6 +15,12 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
+        });
+    }
+
+    public function update(): void
+    {
+        Schema::table('churches', function (Blueprint $table) {
             $table->string('nickname');
         });
     }
