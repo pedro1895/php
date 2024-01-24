@@ -18,7 +18,8 @@ class ShepherdController extends Controller
     function edit($id): View 
     {
         $shepherd = Shepherd::find($id);
-        return view('shepherd.edit', compact('shepherd'));
+        $churches = Church::all();
+        return view('shepherd.edit', compact('shepherd', 'churches'));
     }
 
     function update($id)

@@ -9,6 +9,9 @@
                     Nome do pastor
                 </th>
                 <th>
+                    Igreja
+                </th>                
+                <th>
                     Data da criação
                 </th>
                 <th>
@@ -22,6 +25,9 @@
                 <td>
                     {{$shepherd->name}}
                 </td>
+                <td>
+                    {{$shepherd->church->name}}
+                </td>                
                 <td>
                     {{$shepherd->created_at->format('d/m/Y')}}
                 </td>

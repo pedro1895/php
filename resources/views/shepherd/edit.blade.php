@@ -19,7 +19,12 @@ Nome:
 <br/>
 <input type="text" name="name" value="{{$shepherd->name}}" class="form-control" />
 <br/>
-
+<select name="church" class="form-control">
+    <option></option>
+        @foreach($churches as $church) 
+        <option value="{{ $church->id }}" {!! ($shepherd->church_id == $church->id ? "selected=\"selected\"" : "") !!}> {{ $church->name }}</option>
+        @endforeach
+    </select>
 <input type="submit" value="enviar" class="btn btn-outline-primary"/>
 
 <a href="{{route('shepherd.index')}}" class="btn btn-outline-primary"> Cancelar </a>

@@ -12,6 +12,9 @@
                     Apelido da igreja
                 </th>
                 <th>
+                    Pastores
+                </th>
+                <th>
                     Data da criação
                 </th>
                 <th>
@@ -27,6 +30,11 @@
                 </td>
                 <td>
                     {{$church->nickname}}
+                </td>
+                <td>
+                    @foreach ($church->shepherds as $shepherd)
+                        {{ $shepherd->name }} /
+                    @endforeach 
                 </td>
                 <td>
                     {{$church->created_at->format('d/m/Y')}}
